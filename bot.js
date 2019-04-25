@@ -19,10 +19,22 @@ client.on('message', msg => {
   }
 });
 
-			  
+client.on('ready', () => {
+   console.log(`ـــــــــــــــــــ`);
+      console.log(`Welcome MdAx77x | Welcome To Evel Gates`);
+        console.log(`ــــــــــــــــ`);
+      console.log(`ON ${client.guilds.size} Server`);
+console.log(`This Code Was Made By : Mdax77x`);   
+console.log(`MdAx77x CopyRight `);
+ console.log(`ــــــــــــــــ`);
+  console.log(`Logged in as ${client.user.tag}!`);
+client.user.setGame(`م رخصنا رفيق ولآ ظلمنآ عدو لآكن كلن بفعله يحدد مكانتة #☠️🔕`)
+client.user.setStatus("offline")
+ 
+});			  
 
 
-var prefix = "M"
+var prefix = "x"
 client.on('message', async msg => { 
 	if (msg.author.bot) return undefined;
 	if (!msg.content.startsWith(prefix)) return undefined;
@@ -246,6 +258,20 @@ client.on('message', message => {
     }
 });
 
+client.on('message', message => {
+    if(!message.channel.guild) return;
+    if(message.content.startsWith('xping')) { // حقوق مداكس
+        if (message.author.bot) return;
+        if(!message.channel.guild) return;
+        var Bping =`${Math.round(client.ping)}` // Mdax77x CopyRight | Toxic Codes
+                const E1ping = new Discord.RichEmbed()
+        .setTitle('ــــــــــــــــــــــــــــــ')
+        .addField(`**BOT Ping Is** :__${Bping}📶__`,"ــــــــــــــــــــــــــــــ")
+        .setFooter(`Requested by | ${message.author.tag}`) // حقوق مداكس
+        .setColor('RANDOM')
+        message.channel.send(E1ping);
+    }
+});
 client.login(process.env.BOT_TOKEN);
 
 
