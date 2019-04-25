@@ -223,17 +223,7 @@ function play(guild, song) {
 
 
 
-client.on('ready', () => {
-   console.log(`----------------`);
-      console.log(`R3play🎵`);
-        console.log(`----------------`);
-      console.log(`ON ${client.guilds.size} Servers '     R3play🎵' `);
-    console.log(`----------------`);
-  console.log(`Logged in as ${client.user.tag}!`);
-client.user.setGame(`- MdAx7z . 🎵`,"https://www.twitch.tv/Mdax77xR1")
-client.user.setStatus("online")
- 
-});
+
 
 
 
