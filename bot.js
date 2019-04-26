@@ -277,13 +277,16 @@ client.on("message", async message => {
         {q:"**'ما أسم السيرفر الذي يسرق أكواد'**",a:"Alpha Codes"},
         {q:"**`من هو سيرفر الأطفال `**",a:"Alpha Codes"},
         {q:"**`ما اسم سيرفر المبرمجين الحقيقين`**",a:"Toxic Codes"},
+        {q:"**`ما أسم أفضل سيرفر شهده الديسكورد`**",a:"Toxic Codes"},
         {q:"**`ما أسم أفشل سيرفر شهده الديسكورد `**",a:"Alpha Codes"},
         {q:"**`ماأسم السيرفر الذي تم فضحه`**",a:"Alpha Codes"},
         {q:"**`لماذا سيرفر  الفا كودز يسرقون اكواد توكسك كودس ؟`**",a:"لأنهم أطفال"},
         {q:"**`ما أسم سيرفر الجبناء + الحرامية الذين لايستطيعون  مواجهة توكسك كودس و الوادع`**",a:"Alpha Codes"},
         {q:"**`ماأسم الاونر الجبان الذي لم يستطع مواجهة توكسك كودس ؟`**",a:"YATO"},
         {q:"**`ماأسم السيرفر ألذي طرد اونر توكسك كودس خوفا منه`**",a:"Alpha Codes"},
-        {q:"*`من صنع هذا الكود الرهيب`**",a:"Mdax77x"},    
+        {q:"*`من صنع هذا الكود الرهيب`**",a:"Mdax77x"},  
+        {q:"*`من هو الطفل الممحون الذي حاولت تهكير توكسك كودس`**",a:"Fireking"},    
+        {q:"*`من هو الطفل الذي لايستطيع ان يواجه سيرفر توكسك كودس `**",a:"YATO"},     
     
 
     ];
@@ -305,21 +308,19 @@ client.on("message", async message => {
                if(result.content == "xAlpha") return
                if(result.content == AlphaCodesGame2.a){
                  let E3MdĄx7ź = new Discord.RichEmbed()
-                 .setTitle('=====(The Answer Is Correct)=====')
-                 .addField(' :white_check_markاجابة صحيحة')
+                 .setTitle('=======(The Answer Is Correct)=======')
+                 .addField(':white_check_mark: اجابة صحيحة',"==================")
                  .setColor("RANDOM")
                  .setFooter(`Requested By | ${message.author.tag}`) // Mdax77x | Toxic Codes
-                 .addField('==================',true)
 
                  message.channel.sendEmbed(E3MdĄx7ź);                return;
                } else {
      
                                       var E4MdĄx7ź = new Discord.RichEmbed()
                     .setTitle('=====(Error404)=====')
-                    .addField(':x:الإجابة خاطئة',":x:")
+                    .addField(':x:الإجابة خاطئة',"==============")
                     .setColor("RANDOM")
                     .setFooter(`Requested By | ${message.author.tag}`) // Mdax77x | Toxic Codes
-                    .addField('**==============**',true)
                       message.channel.sendEmbed(E4MdĄx7ź);
                }
          });
