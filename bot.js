@@ -303,7 +303,7 @@ client.on("message", async message => {
             TX.forEach(result => {
                if(result.author.id == client.user.id) return;
                if(result.content == "xAlpha") return
-               if(result.content == Mdax77x.a){
+               if(result.content == AlphaCodesGame2.a){
                  let E3MdĄx7ź = new Discord.RichEmbed()
                  .setTitle('=====(Error404)=====')
                  .setTitle(':white_check_mark: اجابة صحيحة')
