@@ -273,7 +273,6 @@ client.on('message', message => {
 
 
 client.on("message", async message => {
-    var prefix = "x";
     var AlphaCodesGame =[
         {q:"**'ما أسم السيرفر الذي يسرق أكواد'**",a:"Alpha Codes"},
         {q:"**`من هو سيرفر الأطفال `**",a:"Alpha Codes"},
