@@ -288,7 +288,7 @@ client.on("message", async message => {
     
 
     ];
-        if(message.content == prefix+"alpha"){
+        if(message.content == prefix+"Alpha"){
             if(UserBlocked.has(message.guild.id)) return message.channel.send("أنتظر قليلاً .")
             UserBlocked.add(message.guild.id)
             var Mdax77x = AlphaCodesGame[Math.floor(Math.random() * AlphaCodesGame.length)];
@@ -303,7 +303,7 @@ client.on("message", async message => {
             UserBlocked.delete(message.guild.id)
             msgs.forEach(result => {
                if(result.author.id == client.user.id) return;
-               if(result.content == "Alpha") return
+               if(result.content == "xAlpha") return
                if(result.content == Mdax77x.a){
                  let E3MdĄx7ź = new Discord.RichEmbed()
                  .setTitle('=====(Error404)=====')
