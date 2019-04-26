@@ -320,10 +320,11 @@ client.on("message", async message => {
                     .setColor("RANDOM")
                     .setFooter(`Requested By | ${message.author.tag}`) // Mdax77x | Toxic Codes
                     .addField('==================',true)
-                    message.channel.sendEmbed(E4MdĄx7ź);
+                      message.channel.sendEmbed(E4MdĄx7ź);
                }
          });
-
+      }
+    });
 
 
 
