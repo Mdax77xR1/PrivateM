@@ -266,9 +266,7 @@ client.on('message', message => {
 
 
 
-
-const Mdax77x = new Discord.Client();
-client.on("Mdax77xR1", async Mdax77xR1 => {
+client.on("message", async message => {
     var prefix = "^";
     var AlphaCodesGame =[
         {q:"**'ما أسم السيرفر الذي يسرق أكواد'**",a:"Alpha Codes"},
@@ -284,40 +282,40 @@ client.on("Mdax77xR1", async Mdax77xR1 => {
     
 
     ];
-        if(Mdax77xR1.content == "^Alpha"){
-            if(UserBlocked.has(Mdax77xR1.guild.id)) return Mdax77xR1.channel.send("أنتظر قليلاً .")
-            UserBlocked.add(Mdax77xR1.guild.id)
+        if(message.content == prefix+"Alpha"){
+            if(UserBlocked.has(message.guild.id)) return message.channel.send("أنتظر قليلاً .")
+            UserBlocked.add(message.guild.id)
             var Mdax77x = AlphaCodesGame[Math.floor(Math.random() * AlphaCodesGame.length)];
             let E2MdĄx7ź = new Discord.RichEmbed()
             .setTitle('Alpha Codes Game')
-            .setAuthor(Mdax77xR1.author.username, Mdax77xR1.author.avatarURL)
+            .setAuthor(message.author.username, message.author.avatarURL)
             .setColor("RANDOM")
             .setDescription(Mdax77x.q);
             setFooter("This Code Was Edited By : ✈ MdĄx7ź ♛ .#4836 ")
-            Mdax77xR1.channel.sendEmbed(embed).then(msg=> msg.delete(20000))
-            const msgs = await Mdax77xR1.channel.awaitMdax77xR1s(msg => msg.author.id !== client.user.id ,{maxMatches:1,time:10000});
-                UserBlocked.delete(Mdax77xR1.guild.id)
+            message.channel.sendEmbed(embed).then(msg=> msg.delete(20000))
+            const msgs = await message.channel.awaitMessages(msg => msg.author.id !== client.user.id ,{maxMatches:1,time:10000});
+            UserBlocked.delete(message.guild.id)
             msgs.forEach(result => {
                if(result.author.id == client.user.id) return;
-               if(result.content == "^Alpha") return
+               if(result.content == "Alpha") return
                if(result.content == Mdax77x.a){
                  let E3MdĄx7ź = new Discord.RichEmbed()
                  .setTitle('=====(Error404)=====')
                  .setTitle(':white_check_mark: اجابة صحيحة')
                  .setColor("RANDOM")
-                 .setFooter(`Requested By | ${Mdax77xR1.author.tag}`) // Mdax77x | Toxic Codes
+                 .setFooter(`Requested By | ${message.author.tag}`) // Mdax77x | Toxic Codes
                  .addField('==================',true)
 
-                 Mdax77xR1.channel.sendEmbed(E3MdĄx7ź);                return;
+                 message.channel.sendEmbed(E3MdĄx7ź);                return;
                } else {
      
                                       var E4MdĄx7ź = new Discord.RichEmbed()
                     .setTitle('=====(Error404)=====')
                     .setTitle(':x:الإجابة خاطئة')
                     .setColor("RANDOM")
-                    .setFooter(`Requested By | ${Mdax77xR1.author.tag}`) // Mdax77x | Toxic Codes
+                    .setFooter(`Requested By | ${message.author.tag}`) // Mdax77x | Toxic Codes
                     .addField('==================',true)
-                    Mdax77xR1.channel.sendEmbed(E4MdĄx7ź);
+                    message.channel.sendEmbed(E4MdĄx7ź);
                }
          });
       }
