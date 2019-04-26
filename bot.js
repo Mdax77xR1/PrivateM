@@ -6,9 +6,15 @@ const YouTube = require('simple-youtube-api');
 const youtube = new YouTube("AIzaSyAdORXg7UZUo7sePv97JyoDqtQVi3Ll0b8");
 const queue = new Map(); 
 const ytdl = require('ytdl-core');
- const pretty = require('pretty-ms') 
 const fs = require('fs');
 const Util = require('discord.js');
+const UserBlocked = new Set();
+const jimp = require('jimp');   
+const points = {};
+const prefix = "x"
+ const pretty = require('pretty-ms') 
+,ti={}  
+,spee={}; 
 
 ////////////////////////////////////////
 ////////////////////////////////////////
