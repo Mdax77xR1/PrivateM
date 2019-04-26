@@ -262,6 +262,71 @@ client.on('message', message => {
         message.channel.send(E1ping);
     }
 });
+
+
+
+
+
+const Mdax77x = new Discord.Client();
+client.on("Mdax77xR1", async Mdax77xR1 => {
+    const prefix = "^";
+    const AlphaCodesGame =[
+        {q:"**'ما أسم السيرفر الذي يسرق أكواد'**",a:"Alpha Codes"},
+        {q:"**`من هو سيرفر الأطفال `**",a:"Alpha Codes"},
+        {q:"**`ما اسم سيرفر المبرمجين الحقيقين`**",a:"Toxic Codes"},
+        {q:"**`ما أسم أفشل سيرفر شهده الديسكورد `**",a:"Alpha Codes"},
+        {q:"**`ماأسم السيرفر الذي تم فضحه`**",a:"Alpha Codes"},
+        {q:"**`لماذا سيرفر  الفا كودز يسرقون اكواد توكسك كودس ؟`**",a:"لأنهم أطفال"},
+        {q:"**`ما أسم سيرفر الجبناء + الحرامية الذين لايستطيعون  مواجهة توكسك كودس و الوادع`**",a:"Alpha Codes"},
+        {q:"**`ماأسم الاونر الجبان الذي لم يستطع مواجهة توكسك كودس ؟`**",a:"YATO"},
+        {q:"**`ماأسم السيرفر ألذي طرد اونر توكسك كودس خوفا منه`**",a:"Alpha Codes"},
+        {q:"*`من صنع هذا الكود الرهيب`**",a:"Mdax77x"},    
+    
+
+    ];
+        if(Mdax77xR1.content == prefix+"الفا"){
+            if(UserBlocked.has(Mdax77xR1.guild.id)) return Mdax77xR1.channel.send("أنتظر قليلاً .")
+            UserBlocked.add(Mdax77xR1.guild.id)
+            var Mdax77x = AlphaCodesGame[Math.floor(Math.random() * AlphaCodesGame.length)];
+            let E2MdĄx7ź = new Discord.RichEmbed()
+            .setTitle('Alpha Codes Game')
+            .setAuthor(Mdax77xR1.author.username, Mdax77xR1.author.avatarURL)
+            .setColor("RANDOM")
+            .setDescription(Mdax77x.q);
+            setFooter("This Code Was Edited By : ✈ MdĄx7ź ♛ .#4836 ")
+            Mdax77xR1.channel.sendEmbed(embed).then(msg=> msg.delete(20000))
+            const msgs = await Mdax77xR1.channel.awaitMdax77xR1s(msg => msg.author.id !== client.user.id ,{maxMatches:1,time:10000});
+                UserBlocked.delete(Mdax77xR1.guild.id)
+            msgs.forEach(result => {
+               if(result.author.id == client.user.id) return;
+               if(result.content == "Alpha Codes Game") return
+               if(result.content == Mdax77x.a){
+                 let E3MdĄx7ź = new Discord.RichEmbed()
+                 .setTitle('=====(Error404)=====')
+                 .setTitle(':white_check_mark: اجابة صحيحة')
+                 .setColor("RANDOM")
+                 .setFooter(`Requested By | ${Mdax77xR1.author.tag}`) // Mdax77x | Toxic Codes
+                 .addField('==================',true)
+
+                 Mdax77xR1.channel.sendEmbed(E3MdĄx7ź);                return;
+               } else {
+     
+                                      var E4MdĄx7ź = new Discord.RichEmbed()
+                    .setTitle('=====(Error404)=====')
+                    .setTitle(':x:الإجابة خاطئة')
+                    .setColor("RANDOM")
+                    .setFooter(`Requested By | ${Mdax77xR1.author.tag}`) // Mdax77x | Toxic Codes
+                    .addField('==================',true)
+                    Mdax77xR1.channel.sendEmbed(E4MdĄx7ź);
+               }
+         });
+      }
+    });
+
+
+
+
+
 client.login(process.env.BOT_TOKEN);
 
 
