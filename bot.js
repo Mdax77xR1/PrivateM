@@ -269,8 +269,8 @@ client.on('message', message => {
 
 const Mdax77x = new Discord.Client();
 client.on("Mdax77xR1", async Mdax77xR1 => {
-    const prefix = "^";
-    const AlphaCodesGame =[
+    var prefix = "^";
+    var AlphaCodesGame =[
         {q:"**'ما أسم السيرفر الذي يسرق أكواد'**",a:"Alpha Codes"},
         {q:"**`من هو سيرفر الأطفال `**",a:"Alpha Codes"},
         {q:"**`ما اسم سيرفر المبرمجين الحقيقين`**",a:"Toxic Codes"},
@@ -284,7 +284,7 @@ client.on("Mdax77xR1", async Mdax77xR1 => {
     
 
     ];
-        if(Mdax77xR1.content == prefix+"الفا"){
+        if(Mdax77xR1.content == "^Alpha"){
             if(UserBlocked.has(Mdax77xR1.guild.id)) return Mdax77xR1.channel.send("أنتظر قليلاً .")
             UserBlocked.add(Mdax77xR1.guild.id)
             var Mdax77x = AlphaCodesGame[Math.floor(Math.random() * AlphaCodesGame.length)];
@@ -299,7 +299,7 @@ client.on("Mdax77xR1", async Mdax77xR1 => {
                 UserBlocked.delete(Mdax77xR1.guild.id)
             msgs.forEach(result => {
                if(result.author.id == client.user.id) return;
-               if(result.content == "Alpha Codes Game") return
+               if(result.content == "^Alpha") return
                if(result.content == Mdax77x.a){
                  let E3MdĄx7ź = new Discord.RichEmbed()
                  .setTitle('=====(Error404)=====')
