@@ -267,7 +267,7 @@ client.on('message', message => {
 
 
 client.on("message", async message => {
-    var prefix = "^";
+    var prefix = "x";
     var AlphaCodesGame =[
         {q:"**'ما أسم السيرفر الذي يسرق أكواد'**",a:"Alpha Codes"},
         {q:"**`من هو سيرفر الأطفال `**",a:"Alpha Codes"},
@@ -282,7 +282,7 @@ client.on("message", async message => {
     
 
     ];
-        if(message.content == prefix+"Alpha"){
+        if(message.content == prefix+"alpha"){
             if(UserBlocked.has(message.guild.id)) return message.channel.send("أنتظر قليلاً .")
             UserBlocked.add(message.guild.id)
             var Mdax77x = AlphaCodesGame[Math.floor(Math.random() * AlphaCodesGame.length)];
