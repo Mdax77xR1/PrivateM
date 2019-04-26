@@ -305,8 +305,8 @@ client.on("message", async message => {
                if(result.content == "xAlpha") return
                if(result.content == AlphaCodesGame2.a){
                  let E3MdĄx7ź = new Discord.RichEmbed()
-                 .setTitle('=====(Error404)=====')
-                 .setTitle(':white_check_mark: اجابة صحيحة')
+                 .setTitle('=====(The Answer Is Correct)=====')
+                 .addField(' :white_check_markاجابة صحيحة')
                  .setColor("RANDOM")
                  .setFooter(`Requested By | ${message.author.tag}`) // Mdax77x | Toxic Codes
                  .addField('==================',true)
@@ -316,10 +316,10 @@ client.on("message", async message => {
      
                                       var E4MdĄx7ź = new Discord.RichEmbed()
                     .setTitle('=====(Error404)=====')
-                    .setTitle(':x:الإجابة خاطئة')
+                    .addField(':x:الإجابة خاطئة',":x:")
                     .setColor("RANDOM")
                     .setFooter(`Requested By | ${message.author.tag}`) // Mdax77x | Toxic Codes
-                    .addField('==================',true)
+                    .addField('**==============**',true)
                       message.channel.sendEmbed(E4MdĄx7ź);
                }
          });
