@@ -272,6 +272,7 @@ client.on('message', message => {
 
 
 
+
 client.on("message", async message => {
     var AlphaCodesGame =[
         {q:"**'ما أسم السيرفر الذي يسرق أكواد'**",a:"Alpha Codes"},
@@ -290,17 +291,17 @@ client.on("message", async message => {
         if(message.content == prefix+"Alpha"){
             if(UserBlocked.has(message.guild.id)) return message.channel.send("أنتظر قليلاً .")
             UserBlocked.add(message.guild.id)
-            var Mdax77x = AlphaCodesGame[Math.floor(Math.random() * AlphaCodesGame.length)];
+            var AlphaCodesGame2 = AlphaCodesGame[Math.floor(Math.random() * AlphaCodesGame.length)];
             let E2MdĄx7ź = new Discord.RichEmbed()
             .setTitle('Alpha Codes Game')
             .setAuthor(message.author.username, message.author.avatarURL)
             .setColor("RANDOM")
-            .setDescription(Mdax77x.q);
-            setFooter("This Code Was Edited By : ✈ MdĄx7ź ♛ .#4836 ")
-            message.channel.sendEmbed(embed).then(msg=> msg.delete(20000))
-            const msgs = await message.channel.awaitMessages(msg => msg.author.id !== client.user.id ,{maxMatches:1,time:10000});
+            .setDescription(AlphaCodesGame2.q)
+            .setFooter("This Code Was Edited By : ✈ MdĄx7ź ♛ .#4836 ");
+            message.channel.sendEmbed(E2MdĄx7ź).then(msg=> msg.delete(20000))
+            const TX = await message.channel.awaitMessages(msg => msg.author.id !== client.user.id ,{maxMatches:1,time:10000});
             UserBlocked.delete(message.guild.id)
-            msgs.forEach(result => {
+            TX.forEach(result => {
                if(result.author.id == client.user.id) return;
                if(result.content == "xAlpha") return
                if(result.content == Mdax77x.a){
@@ -323,9 +324,6 @@ client.on("message", async message => {
                     message.channel.sendEmbed(E4MdĄx7ź);
                }
          });
-      }
-    });
-
 
 
 
