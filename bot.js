@@ -270,62 +270,74 @@ client.on('message', message => {
 
 
 
+client.on("message", async message => { // Mdax77x | Toxic Codes
+    var TranslationQuestions =[
+        {q:"**'car'**",a:"سيارة"},
+        {q:"**'Home'**",a:"منزل"},
+        {q:"**'Demon'**",a:"شيطان"},
+        {q:"**'Box'**",a:"صندوق"},
+        {q:"**'Phone'**",a:"هاتف"},
+        {q:"**'Company'**",a:"شركة"},
+        {q:"**'Race'**",a:"سباق"},
+        {q:"**'challenge'**",a:"تحدي"},
+        {q:"**'Apple'**",a:"تفاح"},
+        {q:"**'Folder'**",a:"ملف"},
+        {q:"**'Book'**",a:"كتاب"},
+        {q:"**'Smile'**",a:"ابتسامة"},
+        {q:"**'sad'**",a:"حزين"},
+        {q:"**'Happy'**",a:"سعيد"},
+        {q:"**'Clock'**",a:"ساعة"},
+        {q:"**'Trap'**",a:"فخ"},
+        {q:"**'Robot'**",a:"رجل آلي"},
+        {q:"**'WebSite**",a:"موقع"},
+        {q:"**'Animals'**",a:"حيوانات"},
+        {q:"**'Speaker'**",a:"مكبر الصوت"},
 
-
-client.on("message", async message => {
-    var AlphaCodesGame =[
-        {q:"**'ما أسم السيرفر الذي يسرق أكواد'**",a:"Alpha Codes"},
-        {q:"**`من هو سيرفر الأطفال `**",a:"Alpha Codes"},
-        {q:"**`ما اسم سيرفر المبرمجين الحقيقين`**",a:"Toxic Codes"},
-        {q:"**`ما أسم أفضل سيرفر شهده الديسكورد`**",a:"Toxic Codes"},
-        {q:"**`ما أسم أفشل سيرفر شهده الديسكورد `**",a:"Alpha Codes"},
-        {q:"**`ماأسم السيرفر الذي تم فضحه`**",a:"Alpha Codes"},
-        {q:"**`لماذا سيرفر  الفا كودز يسرقون اكواد توكسك كودس ؟`**",a:"لأنهم أطفال"},
-        {q:"**`ما أسم سيرفر الجبناء + الحرامية الذين لايستطيعون  مواجهة توكسك كودس و الوادع`**",a:"Alpha Codes"},
-        {q:"**`ماأسم الاونر الجبان الذي لم يستطع مواجهة توكسك كودس ؟`**",a:"YATO"},
-        {q:"**`ماأسم السيرفر ألذي طرد اونر توكسك كودس خوفا منه`**",a:"Alpha Codes"},
-        {q:"*`من صنع هذا الكود الرهيب`**",a:"Mdax77x"},  
-        {q:"*`من هو الطفل الممحون الذي حاولت تهكير توكسك كودس`**",a:"Fireking"},    
-        {q:"*`من هو الطفل الذي لايستطيع ان يواجه سيرفر توكسك كودس `**",a:"YATO"},     
-    
+    // Mdax77x | Toxic Codes
 
     ];
-        if(message.content == prefix+"Alpha"){
+        if(message.content == prefix+"Trans"){ // Mdax77x | Toxic Codes
             if(UserBlocked.has(message.guild.id)) return message.channel.send("أنتظر قليلاً .")
             UserBlocked.add(message.guild.id)
-            var AlphaCodesGame2 = AlphaCodesGame[Math.floor(Math.random() * AlphaCodesGame.length)];
-            let E2MdĄx7ź = new Discord.RichEmbed()
-            .setTitle('Alpha Codes Game')
+            var TranslationQuestions = TranslationQuestions [Math.floor(Math.random() * TranslationQuestions .length)];
+            let E4MdĄx7ź = new Discord.RichEmbed()
+            .setTitle('Translation Game')// Mdax77x | Toxic Codes 
             .setAuthor(message.author.username, message.author.avatarURL)
             .setColor("RANDOM")
-            .setDescription(AlphaCodesGame2.q)
-            .setFooter("This Code Was Edited By : ✈ MdĄx7ź ♛ .#4836 ");
-            message.channel.sendEmbed(E2MdĄx7ź).then(msg=> msg.delete(20000))
-            const TX = await message.channel.awaitMessages(msg => msg.author.id !== client.user.id ,{maxMatches:1,time:10000});
+            .setDescription(TranslationQuestions.q)
+            .setFooter("This Code Was Edited By : ✈ MdĄx7ź ♛ .#4836 "); /// Mdax77x | Toxic Codes
+            message.channel.sendEmbed(E4MdĄx7ź).then(msg=> msg.delete(20000))
+            const ToxicCodes = await message.channel.awaitMessages(msg => msg.author.id !== client.user.id ,{maxMatches:1,time:10000});
             UserBlocked.delete(message.guild.id)
-            TX.forEach(result => {
+            ToxicCodes.forEach(result => {
                if(result.author.id == client.user.id) return;
-               if(result.content == "xAlpha") return
-               if(result.content == AlphaCodesGame2.a){
-                 let E3MdĄx7ź = new Discord.RichEmbed()
+               if(result.content == "xTrans") return
+               if(result.content == TranslationQuestions.a){
+                 let E5MdĄx7ź = new Discord.RichEmbed()
                  .setTitle('=======(The Answer Is Correct)=======')
                  .addField(':white_check_mark: اجابة صحيحة',"==================")
                  .setColor("RANDOM")
                  .setFooter(`Requested By | ${message.author.tag}`) // Mdax77x | Toxic Codes
 
-                 message.channel.sendEmbed(E3MdĄx7ź);                return;
+                 message.channel.sendEmbed(E5MdĄx7ź);                return;
                } else {
      
-                                      var E4MdĄx7ź = new Discord.RichEmbed()
+                                      var E6MdĄx7ź = new Discord.RichEmbed()
                     .setTitle('=====(Error404)=====')
                     .addField(':x:الإجابة خاطئة',"==============")
                     .setColor("RANDOM")
                     .setFooter(`Requested By | ${message.author.tag}`) // Mdax77x | Toxic Codes
-                      message.channel.sendEmbed(E4MdĄx7ź);
+                      message.channel.sendEmbed(E6MdĄx7ź);
                }
          });
       }
     });
+
+
+
+
+
+
 
 
 
