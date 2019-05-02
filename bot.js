@@ -337,6 +337,36 @@ client.on("message", async message => { // Mdax77x | Toxic Codes
 
 
 
+var figlet = require('figlet');
+client.on('message', edward => {
+    if(!prefix) var prefix = '-';
+    var commandedward = "ascii";
+    if (edward.content.startsWith(prefix + commandedward)) {
+    if (!edward.channel.guild) return;
+    var argsedward = edward.content.split(" ").slice(1).join(" ");
+    if (!argsedward) return edward.channel.send(`**Hey There , Type SomeThing to ASCII** 🌦.`);
+figlet(argsedward, function(err, dataed) {
+    if (err) {
+        edward.channel.send(`\`\`\`apache\nErr; ${err}\`\`\``);
+        }
+    var edwardhere = "";
+    var edwardem = new Discord.RichEmbed()
+    .setColor(edward.member.displayHexColor || "36393e")
+    .setAuthor(`${commandedward} Service;`,edward.author.avatarURL || edward.author.defaultAvatarURL)
+    .setDescription(`|| ------------------------------------------------------------------- ||\`\`\`fix\n${dataed} ${edwardhere}\`\`\``)
+    .setThumbnail(edward.guild.iconURL || edward.author.displayAvatarURL)
+    .setTimestamp()
+    .setFooter(client.user.username,client.user.avatarURL || client.user.defaultAvatarURL);
+if (argsedward.length <= 6){
+    edward.channel.send(edwardem);
+        }
+if (argsedward.length >= 7){
+    edward.channel.send(`\`\`\`fix\n${dataed}\`\`\``);
+     }
+
+})}});
+
+
 
 
 
