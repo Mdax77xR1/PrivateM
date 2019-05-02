@@ -369,6 +369,18 @@ if (argsedward.length >= 7){
 
 
 
+client.on('message', message => {
+if(message.content.startsWith("^created")) {
+const Mdax = new Discord.RichEmbed()
+.setTitle("=-=-=-=-=-=-=-=-") 
+.setDescription("Pong !")
+.addField("=-=-=-=-=-=-=-=-=-=-",`${message.author.tag}`)
+.setFooter("Made By : MdAx77x")
+}
+});
+
+
+
 
 
 client.login(process.env.BOT_TOKEN);
