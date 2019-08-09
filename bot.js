@@ -20,8 +20,8 @@ const prefix = "x"
 ////////////////////////////////////////
 
 client.on('message', msg => {
-  if (msg.content.startsWith('$play')) {
-    msg.channel.send('Use ^play');
+  if (msg.content.startsWith('^play')) {
+    msg.channel.send('Use $play');
   }
 });
 
@@ -34,7 +34,7 @@ console.log(`This Code Was Made By : Mdax77x`);
 console.log(`MdAx77x CopyRight `);
  console.log(`ــــــــــــــــ`);
   console.log(`Logged in as ${client.user.tag}!`);
-client.user.setGame(`^play | By : ✈  xR1`)
+client.user.setGame(`xplay | By : ✈  xR1`)
 client.user.setStatus("idle")
  
 });			  
